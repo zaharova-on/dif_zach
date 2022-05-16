@@ -1,0 +1,16 @@
+3.	Практическое задание. Перед вами программа вычисления логорифма. При вводе «-5» программа возвращает результат «NaN». Определите причину возникновения данной ошибки и предложите исправленный вариант. (Ввод только числовых данных не гарантируется).
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a, b = 0;
+            a = double.Parse(Console.ReadLine()); 
+            b = Math.Log(a); 
+  Console.WriteLine(b);
+            Console.ReadKey();
+        }
+    }
+}
+

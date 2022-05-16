@@ -1,0 +1,22 @@
+3.	Практическое задание. Дан код программы, выводящей введенное слово задом наперед. Проведите анализ программного кода и предложите варианты его оптимизации.
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string word, revers = String.Empty;
+            word = Convert.ToString(Console.ReadLine());
+            int charCount = word.ToCharArray().Length - 1;
+            for (int i = charCount; i >= 0; i--)
+            {
+                if (word[i].ToString() != null)
+                    revers += word[i].ToString();
+                else
+                    continue;
+                if (i == 0) break;
+            }
+            Console.WriteLine(revers);
+            Console.ReadKey();
+        }
+    }

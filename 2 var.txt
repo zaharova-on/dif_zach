@@ -1,0 +1,25 @@
+3.	Практическое задание. Перед вами код программы. Ваша задача описать, что делает данная программа и составить алгоритм ее работы. 
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = String.Empty; int count = 0; 
+  str = Console.ReadLine(); 
+  count = str.Length; if (count < 4)
+            {
+                Console.WriteLine("Маленькое слово");
+            }
+            else if (count > 10)
+            {
+                Console.WriteLine("Большое слово");
+            }
+            else
+            {
+                Console.WriteLine("Обычное слово");
+            }
+            Console.ReadKey();
+        }
+    }
+}

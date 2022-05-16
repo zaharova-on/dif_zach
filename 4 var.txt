@@ -1,0 +1,15 @@
+3.	Практическое задание. Ознакомьтесь с программой вычисления квадратного корня и оцените ее надежность. Опишите недостатки данной программной реализации и предложите исправленный вариант. (Ввод только числовых данных не гарантируется).
+ConsoleApp4
+{
+    class Program
+{
+    static void Main(string[] args)
+    {
+        double a, b = 0;
+        a = double.Parse(Console.ReadLine());
+        b = Math.Sqrt(a);
+        Console.WriteLine(b);
+        Console.ReadKey();
+    }
+} 
+}

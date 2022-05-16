@@ -1,0 +1,22 @@
+3.	Практическое задание. Изучите код программы. С помощью функции «Рассчитать метрики кода» исследуйте удобство обслуживания кода. Измените код программы так, чтобы показатель «Индекс удобства обслуживания кода» для функции Main до уровня не ниже 65. 
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine(); 
+  string[] array = str.Split(',');
+            for (int i = 0; i < array.Length; i++)
+            {
+                int num = int.Parse(array[i]);
+                if (num > 0) num *= -1;
+                array[i] = num.ToString();
+            }
+            str = String.Join(",", array);
+            Console.WriteLine(str);
+            Console.ReadKey();
+        }
+    }
+}
+

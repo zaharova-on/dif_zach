@@ -1,0 +1,35 @@
+3.	Практическое задание. Даны две программы, выводящие в столбик таблицу умножения на 7, но использующих для этого разные алгоритмы. Определите наиболее оптимальный вариант и объясните, почему выбрали именно его, или предложите свой вариант программы.
+namespace ConsoleApp4 // Номер 1 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 7, 14, 21, 28, 35, 42, 49, 56, 63 };
+            Console.WriteLine(String.Format("7 x 1 = {0}", array[0]));
+            Console.WriteLine(String.Format("7 x 2 = {0}", array[1]));
+            Console.WriteLine(String.Format("7 x 3 = {0}", array[2]));
+            Console.WriteLine(String.Format("7 x 4 = {0}", array[3]));
+            Console.WriteLine(String.Format("7 x 5 = {0}", array[4]));
+            Console.WriteLine(String.Format("7 x 6 = {0}", array[5]));
+            Console.WriteLine(String.Format("7 x 7 = {0}", array[6]));
+            Console.WriteLine(String.Format("7 x 8 = {0}", array[7]));
+            Console.WriteLine(String.Format("7 x 9 = {0}", array[8]));
+            Console.ReadKey();
+        }
+    }
+}
+namespace ConsoleApp4 // Номер 2 
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] array = { 7, 14, 21, 28, 35, 42, 49, 56, 63 };
+            for (int i = 1; i <= 9; i++)
+            {
+                Console.WriteLine(String.Format("7 x {0} = {1}", i, array[i - 1]));
+            }
+            Console.ReadKey();
+        }
+    }

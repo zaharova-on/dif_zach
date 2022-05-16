@@ -1,0 +1,24 @@
+3.	Практическое задание. Перед вами код программы. Ваша задача описать, что делает данная программа и составить алгоритм ее работы.
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = Console.ReadLine(); 
+            string[] array = str.Split(','); 
+            for (int i = 0; i < array.Length; i++)
+            {
+                int num = int.Parse(array[i]);
+                if (num > 0)
+                {
+                    num *= -1;
+                    array[i] = num.ToString();
+                }
+            }
+            str = String.Join(",", array);
+            Console.WriteLine(str);
+            Console.ReadKey();
+        }
+    }
+}

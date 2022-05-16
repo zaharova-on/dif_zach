@@ -1,0 +1,17 @@
+3.	Практическое задание. Ознакомьтесь с программой деления 2-х чисел и оцените ее надежность. Опишите недостатки данной программной реализации и предложите исправленный вариант. (Ввод только числовых данных не гарантируется).
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            float a, b, c = 0;
+            a = float.Parse(Console.ReadLine());
+            b = float.Parse(Console.ReadLine());
+            c = a / b;
+            Console.WriteLine(c);
+            Console.ReadKey();
+        }
+    }
+}
+

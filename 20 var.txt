@@ -1,0 +1,49 @@
+3.	Практическое задание. Перед вами код программы. Ваша задача описать, что делает данная программа и составить алгоритм ее работы.
+using System;
+namespace С65
+{
+    class Program
+    {
+        static void sum(double k1, double k2, int n1, int n2, double
+       [] Z, double k3, out double s, out int q)
+        {
+            int i;
+            s = 0; q = 0;
+            for (i = n1; i <= n2; i++)
+            {
+                s = s + (Z[i] + k3);
+                q = q + 1;
+            }
+            s = k1 * Math.Pow(s, (1 / k2));
+        }
+        static void Main(string[] args)
+        {
+            const int n = 12; // Количество элементов массива
+            const double a = 3.0, b = 7.0;
+            double[] X = new double[n];
+            double[] Y = new double[n];
+            double F, s1, s2;
+            int i, q1, q2;
+            Console.WriteLine(" Массив X: ");
+            for (i = 0; i <= (n - 1); i++)
+            {
+                X[i] = i / 2.0 + 5;
+                Console.Write("{0,5:F2} ", X[i]);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine(" Массив Y: ");
+            for (i = 0; i <= (n - 1); i++)
+            {
+                Y[i] = i / 4.0 + 1;
+                Console.Write("{0,5:F2} ", Y[i]);
+            }
+            Console.WriteLine("\n");
+            sum(1.5, 3, 1, 7, X, a, out s1, out q1);
+            sum(8.2, 2, 0, 10, Y, b, out s2, out q2);
+            F = s1 - s2;
+            Console.WriteLine("F={0,6:F3} q1={1} q2={2}",F,q1,q2);
+            Console.ReadLine();
+        }
+    }
+}
+

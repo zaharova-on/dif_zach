@@ -1,0 +1,47 @@
+3.	Практическое задание. Даны две программы, в которых заменяются все буквы а на о, а буквы м на н и результат выводится на консоль. Определите наиболее оптимальный вариант и объясните, почему выбрали именно его, или предложите свой вариант программы.
+
+Способ 1: 
+using System;
+namespace C88
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "информатика";
+            string b;
+            Console.WriteLine("Исходный текст:\t" + a);
+            b = a.Replace('а', 'о');
+            b = b.Replace('м', 'н');
+            Console.WriteLine("Новый текст:\t" + b);
+            Console.ReadLine();
+        }
+    }
+}
+Способ 2.
+using System;
+namespace C85
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string a = "информатика", b = "";
+            char c;
+            int L = a.Length;
+            Console.WriteLine("Исходный текст:\t" + a);
+            for (int i = 0; i <= (L - 1); i++)
+            {
+                c = a[i];
+                if (c == 'а')
+                    b = b + 'о';
+                else if (c == 'м')
+                    b = b + 'н';
+                else
+                    b = b + c;
+            }
+            Console.WriteLine("Новый текст:\t" + b);
+            Console.ReadLine();
+        }
+    }
+}

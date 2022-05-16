@@ -1,0 +1,44 @@
+3.	Практическое задание. Перед вами код программы. Ваша задача описать, что делает данная программа и составить алгоритм ее работы.
+namespace C92
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string str = "АСТАХОВА АННА ВЛАДИМИРОВНА";
+            string f1; // Фамилия
+            string f2; // Имя
+            string f3; // Отчество
+            int i;
+            int k; // Длина строки
+            int k1; // Длина имени
+            int n; // Количество букв "А" в строке
+            string[] strWords;
+            k = str.Length;
+            Console.WriteLine("Длина строки = " + k + "\n ");
+            // Определяем количество букв "А" в строке
+            n = 0;
+            for (i = 0; i <= (k - 1); i++)
+            {
+                if ((str[i] == 'А') || (str[i] == 'а'))
+                    n = n + 1;
+            }
+            Console.WriteLine("В строке количество букв <А> равно "
+            + n + "\n");
+            // Строку разделяем на составные части.
+            // В итоге возвращается массив, содержащий подстроки
+            strWords = str.Split(" ".ToCharArray());
+            f1 = strWords[0]; // Фамилия
+            f2 = strWords[1]; // Имя
+            f3 = strWords[2]; // Отчество
+            Console.WriteLine(f1 + "\n" + f2 + "\n" + f3 + "\n");
+            //Определяем длину имени
+            k1 = f2.Length;
+    
+            Console.WriteLine("Длина имени = " + k1);
+            // Выводим первую букву отчества
+            Console.WriteLine(f3[0]);
+            Console.ReadLine();
+        }
+    }
+}

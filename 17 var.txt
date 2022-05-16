@@ -1,0 +1,14 @@
+3.	Практическое задание. Перед вами код программы. Ваша задача описать, что делает данная программа и составить алгоритм ее работы.
+static void Main()
+{
+    string strA = "Дан текст";
+    string strB = "текст";            
+ 
+    Console.WriteLine(MyContains(strA, strB) ? "Содержит": "Не содержит");
+}
+ 
+static bool MyContains(string strA, string strB)
+{
+    if (strA.Length > strB.Length) return strA.Contains(strB);
+    else return strB.Contains(strA);
+}

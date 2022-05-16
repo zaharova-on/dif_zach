@@ -1,0 +1,16 @@
+3.	Практическое задание. Перед вами программа деления 2-х чисел. При вводе данных «-4,2» и «2» работа программы завершается с ошибкой. Определите причину возникновения ошибки и предложите исправленный вариант. (Ввод только числовых данных не гарантируется).
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int a, b, c = 0;
+            a = int.Parse(Console.ReadLine()); 
+            b = int.Parse(Console.ReadLine());
+            c = a / b;
+            Console.WriteLine(c);
+            Console.ReadKey();
+        }
+    }
+}

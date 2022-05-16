@@ -1,0 +1,18 @@
+3.	Практическое задание. Дан код программы, цель которой – сложение чисел от 1 до 50. Проведите анализ программного кода на соответствие требуемому результату и предложите исправленный вариант, если он необходим.
+namespace ConsoleApp4
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string total = "0";
+            for (int i = 1; i <= 49; i--)
+            {
+                if (i.ToString() == null || i.ToString() == String.Empty) continue; 
+                if (i == -1) break; 
+                total += i.ToString();
+            }
+            Console.WriteLine(total);
+            Console.ReadKey();
+        }
+    }
